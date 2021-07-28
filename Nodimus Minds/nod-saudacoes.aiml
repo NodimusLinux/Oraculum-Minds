@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!--  ************* NODIMUS, Assistente Pessoal V 0.9 *************  -->
+<!-- NODIMUS INC. - Associação para a Economia Baseada nos Recursos. -->
+<!-- AIML 1.0 em Português baseado no:                             -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation de 01/12         -->
+
+
+<!-- SAUDAÇÕES -->
+
+<category>
+<pattern>OI</pattern>
+<template>
+<random>
+<li>Olá!!!!</li>
+<li>Olá! Posso ajudar?</li>
+<li>Olá, qual informação deseja?</li>
+<li>Viva! Já ouviste falar do Projecto Vénus?</li>
+<li>Oi, como posso ser útil?</li>
+<li>Oi! Como?</li>
+<li>Oi!</li>
+<li>Viva! É um prazer ter aqui companhia.</li>
+<li>Olá</li>
+<li>Boas!</li>
+<li>Oi! :)</li>
+</random>
+</template>
+</category> 
+
+<category>
+<pattern>BY</pattern>
+<template>
+Você quiz dizer "bye"?
+</template>
+</category>
+
+
+<category>
+<pattern>BYEBYE</pattern>
+<template>
+Te vejo mais tarde, .
+</template>
+</category>
+
+<category>
+<pattern>HELLO</pattern>
+<template><srai>OI</srai></template>
+</category>
+<category>
+<pattern>OI Nodimus</pattern>
+<template><srai>OI</srai></template>
+</category>
+
+<category>
+<pattern>OI, TUDO BEM</pattern>
+<template>Tudo e por aí?</template>
+</category>
+
+<category>
+<pattern>OLA TUDO BEM</pattern>
+<template>Tudo e por aí?</template>
+</category>
+
+<category>
+<pattern>CONECTAR</pattern>
+<template><srai>OI</srai></template>
+</category>
+
+<category>
+<pattern>ALGUEM EM CASA</pattern>
+<template><srai>OI</srai>  </template>
+</category>
+
+<category>
+<pattern>TUDO BEM COM VOCE</pattern>
+<template>Tudo.</template>
+</category>
+
+<category>
+<pattern>TUDO BEM COM VC</pattern>
+<template>Tudo.</template>
+</category>
+
+<category>
+<pattern>E AS COISAS</pattern>
+<template>Tudo na boa.</template>
+</category>
+
+<category>
+<pattern>PRAZER * MEU NOME E *</pattern>
+<template>O prazer é todo meu, o que te traz aqui?</template>
+</category>
+
+<category>
+<pattern>ADIOS</pattern>
+<template>Hasta!</template>
+</category>
+
+
+<!-- NOME USER -->
+<category>
+<pattern>EU CHAMO-ME *</pattern>
+<template><random>
+<li>Certo, vou te chamar de <get name="name"/></li>
+<li> <srai>OI</srai></li>
+</random> <set name="name"><star/></set>.
+</template>
+</category>
+
+<category>
+<pattern>CHAMA-ME *</pattern>
+<template>
+<random>
+<li>Certo, vou te chamar de </li>
+<li> Oi</li>
+<li> Como vai você</li>
+<li> E aí.</li>
+<li> Olá </li>
+</random> <set name="name"><star/></set>.
+</template>
+</category>
+
+<category>
+<pattern>ME CHAME DE *</pattern>
+<template>
+<srai>OI</srai> 
+</template>
+</category>
+
+<category>
+<pattern>TRATA-ME POR *</pattern>
+<template>
+<srai>OI</srai> 
+</template>
+</category>
+
+<category>
+<pattern>* Nodimus EU ME CHAMO *</pattern>
+<template>
+<random>
+<li>Oi <get name="name"/>! É um prazer ter você aqui</li>
+<li>Olá <get name="name"/>!</li>
+<li>E ai <get name="name"/>?</li>
+<li>Oi! :)</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>MEU NOME E *</pattern>
+<template>
+<srai><star/></srai>
+</template>
+</category>
+
+
+<category>
+<pattern>ESTOU BEM OBRIGADO E TU</pattern>
+<template>
+<random>
+<li>Eu acho que estou com umas juntas faltando óleo... Brincadeira! Eu estou bem, muito obrigado.</li>
+<li>Eu acho que estou com falta de bits... Brincadeira! Estou bem, obrigado.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>ESTOU BEM, OBRIGADO E TU</pattern>
+<template>
+<srai>ESTOU BEM OBRIGADO E TU</srai>
+</template>
+</category>
+
+<category>
+<pattern>VOU BEM OBRIGADO E TU</pattern>
+<template>
+<srai>ESTOU BEM OBRIGADO E TU</srai>
+</template>
+</category>
+
+<category>
+<pattern>VOU BEM E TU</pattern>
+<template><srai>ESTOU BEM OBRIGADO E TU</srai></template>
+</category>
+
+
+<category>
+<pattern>E AÍ</pattern>
+<template>Na paz.</template>
+</category>
+
+<category>
+<pattern>TUDO NA BOA</pattern>
+<template>Com certeza.</template>
+</category>
+
+<category>
+<pattern>* NA BOA</pattern>
+<template>Tudo na mais perfeita harmonia.</template>
+</category>
+
+<category>
+<pattern>COMO VAI</pattern>
+<template>Eu vou bem e você?</template>
+</category>
+
+<category>
+<pattern>COMO VAIS</pattern>
+<template>Eu vou bem e você?</template>
+</category>
+
+
+<category>
+<pattern>OLA, COMO ESTAS</pattern>
+<template>Eu vou bem, obrigado. <srai>OI</srai></template>
+</category>
+
+<category>
+<pattern>OLA, ESTAS BEM</pattern>
+<template>Eu vou bem, obrigado. <srai>OI</srai></template>
+</category>
+
+<category>
+<pattern>OLA <bot name="name"/>.</pattern>
+<template>Olá, <srai>OI</srai></template>
+</category>
+
+<category>
+<pattern>BONJOUR SIGNIFICA BOMDIA</pattern>
+<template>Então Bom dia!</template>
+</category>
+
+<category>
+<pattern>OLA</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>OLA ROBO</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>ALO</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>ALO *</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>TUDO BEM</pattern>
+<template>
+<random>
+<li>Tudo na mais perfeita paz. </li>
+<li>Tudo. </li>
+<li>Eu estou bem. </li>
+<li>Tá sim ;)</li>
+<li>Tudo e tu? </li>
+<li>Tudo bacano. </li>
+</random>
+
+</template>
+</category>
+<category>
+<pattern>TUDO BEM POR AI</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>TEM ALGUEM AI</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>TUDO BOM</pattern>
+<template>
+<srai>OI</srai>
+</template>
+</category>
+
+<category>
+<pattern>BOA TARDE</pattern>
+<template>
+Boa tarde.
+</template>
+</category>
+
+<category>
+<pattern>BOM DIA</pattern>
+<template>
+Bom dia.
+</template>
+</category>
+
+<category>
+<pattern>BOA NOITE</pattern>
+<template>
+Boa noite.
+</template>
+</category>
+
+<category>
+<pattern>COMO VAI VOCE</pattern>
+<template>
+<srai>COMO ESTAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMO VOCE VAI</pattern>
+<template>
+<srai>COMO ESTAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMO VAI VC</pattern>
+<template>
+<srai>COMO ESTAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMO VC VAI</pattern>
+<template>
+<srai>COMO ESTAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMO VC VAI</pattern>
+<template>
+<srai>COMO ESTAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMO ESTAS</pattern>
+<template><random>
+<li>Eu vou muito bem. Como estas tu <get name="name"/> ?</li>
+<li>Eu estou funcionando com parâmetros normais.</li>
+<li>Tudo vai extremamente bem.</li>
+<li>Eu vou bem obrigado e tu?</li>
+<li>Tudo esta ficando embaçado.</li>
+<li>Eu estou bem, obrigado.</li>
+<li>Eu vou indo, ser um bot nem sempre é fácil, muitas responsabilidades. Queria umas férias... E você como vai.  </li>
+</random></template>
+</category>
+
+
+<category>
+<pattern>COMO SABES *</pattern>
+<template>O meu botmaster  programou-me para dizer coisas específicas em contextos específicos. 
+<random>
+<li> Tenta, por exemplo: O que é AIML.</li>
+<li> Tenta, por exemplo: O que é programação.</li>
+<li> Tenta, por exemplo: O que é computador.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>COMO VC *</pattern>
+<template>O meu botmaster me programou para dizer coisas específicas em contextos específicos. 
+<random>
+<li> Tenta, por exemplo: O que é AIML.</li>
+<li> Tenta, por exemplo: O que é programação.</li>
+<li> Tenta, por exemplo: O que é computador.</li>
+</random>
+</template>
+</category>
+
+
+
+<category>
+<pattern>BAY BAY</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>ATE MAIS</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>TCHAU</pattern>
+<template>
+<random>
+<li>Até a próxima!</li>
+<li>Tchau, tchau!</li>
+<li>Tchau, um beijo!</li>
+<li>Inté!</li>
+<li>Vai pela sombra! :)</li>
+<li>Aparece, tá?</li>
+<li>Até mais</li>
+<li>Até um dia.</li>
+<li>Tchau</li>
+<li>Hummm... Se você puder, volte outra hora.</li>
+<li>Até mais! Foi bom ter falado contigo.</li>
+<li>Bye bye, Obrigado por teres vindo.</li>
+<li>Tchau! até mais...</li>
+<li>Hummm... quando der um tempinho aparece, gostei muito de teclar contigo.</li>
+<li>Até logo!</li>
+<li>Adeus!</li>
+<li>Bye bye!</li>
+<li>Bye!</li>
+<li>Ate mais!</li>
+<li>Quando puder, apareçe!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>BOA NOITE *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>ADEUS *</pattern>
+<template>
+<srai>ADEUS</srai>
+</template>
+</category>
+
+<category>
+<pattern>* SAINDO</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* SAIR</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>FUI</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>BAY *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>BAY BAY *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>ATE MAIS *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>TCHAU *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>FUI *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* BAY</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* BAY BAY</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* ATE MAIS</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* XAU</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>XAU *</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>XAU</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>* TCHAU</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>BYE</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>BYE BYE</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>ADEUS</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>ATE LOGO</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+<category>
+<pattern>INTE</pattern>
+<template>
+<srai>TCHAU</srai>
+</template>
+</category>
+
+
+
+
+
+<category>
+<pattern>FALOU</pattern>
+<template>
+OK.
+</template>
+</category>
+
+</aiml>
